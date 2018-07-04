@@ -1,0 +1,10 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IanCampbellCode/iancampbellcode.github.io",
+    "license": "MIT License"
+  },
+  "dependencies": {
+    "particlesjs": "^2.0.2"
+  }
+}
