@@ -5,6 +5,24 @@
 <head>
 <title>Ian W. Campbell</title>
 <meta charset="utf-8">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="assets/images/clouds.ico">
+
+  <!-- Links to other files -->
+  <link rel="stylesheet" href="assets/main.css"/>
+
+  <!-- Bootstrap and Font-awesome CDN's -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!--Makes sure it's being viewed properly-->
+  <!-- user-scalable doesn't allow ppl to zoom in on mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
 </head>
 
 <!-- APIS -->
@@ -12,7 +30,158 @@
 <!-- Backup Font if custom one fails -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat" rel="stylesheet" type="text/css">
 
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+    
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="#about" onclick="closer()">About</a>
+        <a href="#skills" onclick="closer()">Skills</a>
+        <a href="#projects" onclick="closer()">Projects</a>
+        <a href="#contact" onclick="closer()">Contact</a>
+      </div>
+    
+</div>
+
 <body>
-<p>Hello WOrld</p>
+
+<!-- Header -->
+<div class="header vertical-center">
+    
+      <a id="hamburger-icon" href="#" title="Menu" onclick="openNav()">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </a>
+    
+      <div class="container-fluid">
+        <div class="center">
+          <strong><h1>IAN W. CAMPBELL</h1></strong>
+          <h2>Developer</h2>
+        </div>
+      </div>
+      <canvas class="background">
+      </canvas>
+    </div>
+
+    <!-- About page -->
+<div class="about padding" id="about">
+        <div class="row">
+          <div class="container-fluid">
+            <div class="col-md-4">
+              <div class="profile">
+      
+                <!-- Alt is used if the image is not loading -->
+                <center><img src="assets/images/profile_picture.jpg" id="portPic" alt="Simple icon" class="img-responsives
+                  img-circle"></center>
+              </div>
+            </div>
+      
+            <div class="col-md-8">
+              <div class="about-description">
+                <b><h3>About Me</h3></b>
+                <hr>
+                <p>
+                    Hello! I'm a graduate from the State University of New York at Oswego. I received a dual degree in Computer Science and Philosophy with a minor in Logic. I am currently working as a
+                    software developer in Upstate New York. At this time I'm working towards finishing prerequisite classes for an MBA program.
+                </p>
+                <p>
+                  As a hobby, I like to ride my motorcycle, hike and contribute on programming forums. In the future I hope to be able to bring together my passions for philosophy,
+                  software development and business by creating an ethically driven and responsible non-profit organization to help provide opportunities for individuals who have
+                  not be as fortunate as I have been.
+              </div>
+      
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+      <!-- Skills -->
+<div class="skills padding" id="skills">
+        <div class="container" style="font-family: 'Open Sans'">
+          <b><h3>Skills</h3></b>
+          <hr>
+          <div class="row">
+            <div class="col-md-4 col-sm-4">
+              <center><i class="contact-icon fa fa-gear fa-3x"></i>
+                <strong><h4>Programming Languages</h4></strong></center>
+              <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Common Lisp</li>
+              </ul>
+              <br>
+            </div>  
+            <div class="col-md-4 col-sm-4">
+              <center><i class="contact-icon fa fa-cloud fa-3x"></i>
+                <strong><h4>Other</h4></strong></center>
+              <ul>
+                <li>SQL</li>
+                <li>Android</li>
+                <li>Git</li>
+                <li>UNIX</li>
+                <li>Latex</li>
+              </ul>
+              <br>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+<div class="contact padding" id="contact">
+        <div class="container">
+          <b><h3>Contact Me</h3></b>
+          <hr>
+          <div class="row">
+            <center>
+      
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <a href="mailto:iancampbellcode@gmail.com" target="blank">
+                  <i class="contact-icon fa fa-envelope fa-5x"></i>
+                </a>
+                <br>
+              </div>
+      
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <a href="https://github.com/iancampbellcode" target="blank">
+                  <i class="contact-icon fa fa-github fa-5x"></i>
+                </a>
+                <br>
+              </div>
+      
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <a href="linkedin.com/in/ian-campbell-5844b9b5" target="blank">
+                  <i class="contact-icon fa fa-linkedin fa-5x"></i>
+                </a>
+                <br>
+              </div>
+            </center>
+          </div>
+      
+        </div>
+      </div>
+      
+      <!--Footer-->
+      <div class="footer header">
+        <div class="container">
+          <footer><p>© 2018 by Ian W. Campbell</p></footer>
+        </div>
+      </div>
+      
+      <!-- Imports jquery,bootstrap, and javascript -->
+      <script
+              src="https://code.jquery.com/jquery-3.2.1.min.js"
+              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+              crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+              integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+              crossorigin="anonymous"></script>
+      <script src="https://npmcdn.com/particlesjs@2.0.2/dist/particles.min.js"></script>
+      <script src="assets/js/particles.js"></script>
+      <script src="assets/js/main.js"></script>
 </body>
 </html>
